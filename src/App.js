@@ -83,9 +83,9 @@ function App() {
       // ********
       .send({
         gasLimit: 285000 * _amount,
-        to: "0x8815e06FC5b57Bd4d5590977a697582f19d2330e", // the address of your contract
+        to: "0x03C94DC266bD8Bd942453c4FabA3BAD228003bd3", // the address of your contract
         from: blockchain.account,
-        value: blockchain.web3.utils.toWei((0.035 * _amount).toString(), "ether"),
+        value: blockchain.web3.utils.toWei((0.04 * _amount).toString(), "ether"),
       })
       .once("error", (err) => {
         console.log(err);
@@ -127,39 +127,42 @@ function App() {
               className="logo"
             ></img></a>
         </s.TextTitle>
-        <div style={{
-          marginTop: 40,
-          fontSize: 20,
+        <div 
+        className="menubar"
+        style={{
+          // marginTop: 40,
+          // fontSize: 20,
           color: "blue",
-          backgroundColor: "black",
+          // backgroundColor: "black",
           padding: 20,
           borderRadius: 0,
           borderColor: "white",
-          borderWidth: 5,
+          // borderWidth: 5,
           borderStyle: "solid",
-          boxShadow: "0px 0px 10px white"
+          // boxShadow: "0px 0px 10px white"
         }}>
-          <a href="#Minter">Minter</a> | <a href="#Roadmap">Roadmap</a> | <a href="#Roadmap"> OpenSea</a> | <a href="#Roadmap">Twitter</a>
+          <a href="#Minter">Minter</a> | <a href="#Roadmap">Roadmap</a> | <a href="https://opensea.io"> OpenSea</a> | <a href="https://twitter.com">Twitter</a>
         </div>
         <s.SpacerMedium />
         <s.Container
+        className="topdesc"
           flex={1}
           jc={"center"}
           ai={"center"}
-          id="Roadmap"
           style={{
             backgroundColor: "black",
             color: "white",
             padding: 44,
             paddingTop: 24,
-            fontSize: 30,
+            // fontSize: 30,
             maxWidth: 1500,
             borderRadius: 100,
             borderColor: "white",
             borderWidth: 5,
             borderStyle: "solid",
             boxShadow: "0px 0px 10px white",
-            textAlign: "center"
+            textAlign: "center",
+            marginBottom: 20
           }}
         >
           <text className="rainbow" style={{ fontSize: 30 }}></text>
@@ -281,7 +284,7 @@ function App() {
                   {blockchain.account === "" ||
                     blockchain.smartContract === null ? (
                     <s.Container ai={"center"} jc={"center"}>
-                      <s.TextDescription style={{ textAlign: "center", fontSize: 50, marginBottom: 0, color: "white" }}>
+                      <s.TextDescription style={{ textAlign: "center", fontSize: 30, marginBottom: 0, color: "white" }}>
                         Connect to the CryptoBugPunks Minter!
                       </s.TextDescription>
                       <s.SpacerSmall />
@@ -343,7 +346,7 @@ function App() {
                             }}
                           />
                         </div>
-                        Ghosts
+                        CBPs
                       </form>
                       <s.SpacerSmall />
                       <StyledButton
@@ -369,12 +372,13 @@ function App() {
               jc={"center"}
               ai={"center"}
               id="Roadmap"
+              className="fullmap"
               style={{
                 backgroundColor: "black",
                 color: "white",
                 padding: 24,
                 paddingTop: 24,
-                fontSize: 40,
+                // fontSize: 40,
                 maxWidth: 1500,
                 borderRadius: 100,
                 borderColor: "white",
@@ -384,26 +388,26 @@ function App() {
                 textAlign: "center"
               }}
             >
-              <text className="rainbow" style={{ fontSize: 60 }}>Roadmap</text>
+              <text className="rainbow roadmap">Roadmap</text>
               <br></br>
               <s.SpacerMedium />
               <s.SpacerMedium />
               <text style={{ textAlign: "left", paddingLeft: 40 }}>
-                <text className="rainbow" style={{ fontSize: 60 }}>25% </text>
+                <text className="rainbow roadmap">25% </text>
                 <br></br>
                 <s.SpacerSmall />
                 - 10 NFT Giveaway and 5 x $1000 ETH Giveaway
                 <br />
                 <s.SpacerMedium />
                 <s.SpacerSmall />
-                <text className="rainbow" style={{ fontSize: 60 }}>50% </text>
+                <text className="rainbow roadmap">50% </text>
                 <br></br>
                 <s.SpacerSmall />
                 - 5% to Community Selected Charities and Rarity Ranking
-                <br />
+                <br/>
                 <s.SpacerMedium />
                 <s.SpacerSmall />
-                <text className="rainbow" style={{ fontSize: 60 }}>75% </text>
+                <text className="rainbow roadmap">75% </text>
                 <br></br>
                 <s.SpacerSmall />
                 - Buy plot of land in the Metaverse to build a CryptoBugPunk garage where the community
@@ -411,7 +415,7 @@ function App() {
                 <br />
                 <s.SpacerMedium />
                 <s.SpacerSmall />
-                <text className="rainbow" style={{ fontSize: 60 }}>100% </text>
+                <text className="rainbow roadmap">100% </text>
                 <br></br>
                 <s.SpacerSmall />
                 - 10 x $1000 ETH Giveaway. Continued growth of project, and additional collections released.
@@ -437,7 +441,7 @@ function App() {
         <s.Container jc={"center"} ai={"center"} style={{ width: "70%" }}>
           <s.TextDescription id="google" style={{ textAlign: "center", fontSize: 40 }}>
             <a
-              href="https://rinkeby.etherscan.io/address/0x8815e06FC5b57Bd4d5590977a697582f19d2330e"
+              href="https://rinkeby.etherscan.io/address/0x03C94DC266bD8Bd942453c4FabA3BAD228003bd3"
               style={{
                 textDecoration: "none",
                 color: "black",

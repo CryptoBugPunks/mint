@@ -1,12 +1,13 @@
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 .bigContainer {
     color: white;
 }
 .logo {
-    height: 15px;
-    width: 200px;
+    height: 30px;
+    width: 400px;
 }
 
 .logoHolder {
@@ -90,7 +91,51 @@ a:hover {
      100%{color: orange;}
  }
 
+
+
+
+
+ .menubar {
+     font-size: 0px;
+     border-width: 0px;
+     background-color: rgba(255, 255, 255, 0);
+     box-shadow: none;
+     margin-top: 0px;
+ }
+
+ .topdesc {
+    font-size: 20px;
+ }
+
+ .roadmap {
+     font-size: 20px;
+ }
+
+ .fullmap {
+     font-size: 15px;
+ }
+
 @media (min-width: 767px) {
+
+    .fullmap {
+        font-size: 40px;
+    }
+
+    .roadmap {
+        font-size: 80px;
+    } 
+
+    .topdesc {
+     font-size: 30px;
+    }
+
+    .menubar {
+        font-size: 20px;
+        border-width: 5px;
+        background-color: black;
+        box-shadow: "0px 0px 10px white";
+        margin-top: 30px;
+     }
     .logo {
         height: 50px;
         width: 600px;
@@ -104,6 +149,7 @@ a:hover {
         border-radius: 50px;
         box-shadow: 0px 0px 30px white;
     }
+
 
     
 }
