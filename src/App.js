@@ -151,7 +151,7 @@ function App() {
           borderStyle: "solid",
           // boxShadow: "0px 0px 10px white"
         }}>
-          <a onClick={onLinkClick}>Minter</a> | <a onClick={onRoadClick}>Roadmap</a> | <a href="https://opensea.io"> OpenSea</a> | <a href="https://twitter.com">Twitter</a>
+          <a onClick={onLinkClick}>Minter</a> | <a onClick={onRoadClick}>Roadmap</a> | <a href="https://opensea.io" target="_blank" rel="noopener noreferrer"> OpenSea</a> | <a href="https://twitter.com/cryptobugpunks" target="_blank" rel="noopener noreferrer">Twitter</a>
         </div>
         <s.SpacerMedium />
         <s.Container
@@ -183,6 +183,10 @@ function App() {
           The CryptoBug Punks are waiting to park up in your garage. <br/>
           <s.SpacerMedium/>
           Let`s see how far around the world they can reach!
+          <br/>
+          <s.SpacerMedium/>
+          Countdown to launch:<s.SpacerXSmall/>
+          <img src="https://gen.sendtric.com/countdown/rpozymsnsv" />
         </s.Container>
         <ResponsiveWrapper flex={1} style={{ padding: 24, paddingTop: 0 }}>
           <s.Container flex={1} jc={"center"} ai={"center"} style={{ paddingTop: 0, flexDirection: "column" }}>
@@ -429,6 +433,66 @@ function App() {
                 <br></br>
                 <s.SpacerSmall />
                 - 10 x $1000 ETH Giveaway. Continued growth of project, and additional collections released.
+                <br />
+                <s.SpacerMedium />
+                <s.SpacerSmall />
+                <s.SpacerMedium />
+                <s.SpacerSmall />
+
+              </text>
+            </s.Container>
+            <s.SpacerLarge />
+            <s.Container
+              flex={1}
+              jc={"center"}
+              ai={"center"}
+              id="Roadmap"
+              className="fullmape"
+              style={{
+                backgroundColor: "black",
+                color: "white",
+                padding: 24,
+                paddingTop: 24,
+                // fontSize: 40,
+                maxWidth: 1500,
+                borderRadius: 100,
+                borderColor: "white",
+                borderWidth: 5,
+                borderStyle: "solid",
+                boxShadow: "0px 0px 10px white",
+                textAlign: "center"
+              }}
+            >
+              <text className="rainbow roadmap">FAQ</text>
+              <br></br>
+              <s.SpacerMedium />
+              <s.SpacerMedium />
+              <text style={{ textAlign: "left", paddingLeft: 40 }}>
+                <text className="rainbow roadmape">What is the total supply? </text>
+                <br></br>
+                <s.SpacerSmall />
+                A total of 10,000 unique CryptoBugPunk NFTs will be created.
+                <br />
+                <s.SpacerMedium />
+                <s.SpacerSmall />
+                <text className="rainbow roadmape">When is the launch? </text>
+                <br></br>
+                <s.SpacerSmall />
+                The full launch is December 5th, 2021 @ 12:00PM EST.
+                <br/>
+                <s.SpacerMedium />
+                <s.SpacerSmall />
+                <text className="rainbow roadmape">How much does it cost to mint an NFT? </text>
+                <br></br>
+                <s.SpacerSmall />
+                0.04 ETH + Gas.
+                <br />
+                <s.SpacerMedium />
+                <s.SpacerSmall />
+                <text className="rainbow roadmape">How can I mint an NFT? </text>
+                <br></br>
+                <s.SpacerSmall />
+                CryptoBugPunks can be minted by connecting your wallet to the minter above and entering the amount you want to mint.
                 <br />
                 <s.SpacerMedium />
                 <s.SpacerSmall />

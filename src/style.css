@@ -114,11 +114,16 @@ a:hover {
  .fullmap {
      font-size: 15px;
  }
+ .fullmape {
+    font-size: 15px;
+}
 
 @media (min-width: 767px) {
-
+    .fullmape {
+        font-size: 30px;
+    }
     .fullmap {
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .roadmap {
