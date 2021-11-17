@@ -27,6 +27,12 @@ export const StyledButton = styled.button`
     box-shadow: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
+    color: #white;
+  }
+  :hover {
+    transition-duration: .4s;
+    color: black;
+    background-color: #37F713;
   }
 `;
 
@@ -64,7 +70,7 @@ function App() {
     if (_amount <= 0) {
       return;
     }
-    setFeedback("Minting your Official BooCrew NFT...");
+    setFeedback("Minting your Official CryptoBugPunk(s)...");
     setClaimingNft(true);
     blockchain.smartContract.methods
       .mint(blockchain.account, _amount)
@@ -88,7 +94,7 @@ function App() {
       })
       .then((receipt) => {
         setFeedback(
-          "Your BooCrew NFT has been successfully minted!"
+          "Your CryptoBugPunk(s) successfully minted!"
         );
         setClaimingNft(false);
         dispatch(fetchData(blockchain.account));
@@ -121,10 +127,50 @@ function App() {
               className="logo"
             ></img></a>
         </s.TextTitle>
-        <div style={{ marginTop: 40, fontSize: 20, color: "white" }}>
-          <a href="#Minter">Minter</a> | <a href="#Roadmap">Roadmap</a>
+        <div style={{
+          marginTop: 40,
+          fontSize: 20,
+          color: "blue",
+          backgroundColor: "black",
+          padding: 20,
+          borderRadius: 0,
+          borderColor: "white",
+          borderWidth: 5,
+          borderStyle: "solid",
+          boxShadow: "0px 0px 10px white"
+        }}>
+          <a href="#Minter">Minter</a> | <a href="#Roadmap">Roadmap</a> | <a href="#Roadmap"> OpenSea</a> | <a href="#Roadmap">Twitter</a>
         </div>
         <s.SpacerMedium />
+        <s.Container
+          flex={1}
+          jc={"center"}
+          ai={"center"}
+          id="Roadmap"
+          style={{
+            backgroundColor: "black",
+            color: "white",
+            padding: 44,
+            paddingTop: 24,
+            fontSize: 30,
+            maxWidth: 1500,
+            borderRadius: 100,
+            borderColor: "white",
+            borderWidth: 5,
+            borderStyle: "solid",
+            boxShadow: "0px 0px 10px white",
+            textAlign: "center"
+          }}
+        >
+          <text className="rainbow" style={{ fontSize: 30 }}></text>
+          CryptoBugPunks is a collection of 10,000 unique NFTs— unique digital collectibles living on the Ethereum blockchain. <br/>
+          <s.SpacerMedium/>
+          Total Supply: 10,000. <br/>Every single CryptoBugPunk is 1/1.<br/>
+          <s.SpacerMedium/>
+          The CryptoBug Punks are waiting to park up in your garage. <br/>
+          <s.SpacerMedium/>
+          Let`s see how far around the world they can reach!
+        </s.Container>
         <ResponsiveWrapper flex={1} style={{ padding: 24, paddingTop: 0 }}>
           <s.Container flex={1} jc={"center"} ai={"center"} style={{ paddingTop: 0, flexDirection: "column" }}>
             <s.TextTitle
@@ -134,7 +180,15 @@ function App() {
                 fontWeight: "bold",
                 borderStyle: "solid",
                 borderColor: "black",
-                color: "black"
+                color: "white",
+                backgroundColor: "black",
+                padding: 20,
+                borderRadius: 100,
+                borderColor: "white",
+                borderWidth: 5,
+                borderStyle: "solid",
+                boxShadow: "0px 0px 10px white",
+                marginBottom: 20,
               }}>
               0.04 ETH + Gas
             </s.TextTitle>
@@ -156,27 +210,42 @@ function App() {
                 paddingLeft: 100,
                 paddingRight: 100,
                 borderRadius: 0,
-                marginTop: 0,
-                marginBottom: 0
+                marginTop: 20,
+                marginBottom: 20,
+                backgroundColor: "black",
+                padding: 20,
+                color: "white",
+                borderRadius: 100,
+                borderColor: "white",
+                borderWidth: 5,
+                borderStyle: "solid",
+                boxShadow: "0px 0px 10px white"
               }}
             >
               {blockchain.account == null ? "????" : (data.totalSupply)}/10000
             </s.TextTitle>
             {/* <s.SpacerMedium/> */}
+            {/* Beginning of minting button box */}
             <s.Container
               flex={1}
               jc={"center"}
               ai={"center"}
+              id="Minter"
               style={{
-                backgroundColor: "#FFA537",
+                backgroundColor: "black",
                 color: "white",
-                padding: 24,
-                paddingTop: 0,
+                padding: 50,
                 borderStyle: "solid",
                 borderColor: "black",
                 borderWidth: 0,
                 borderRadius: 30,
-                fontSize: 40
+                fontSize: 40,
+                maxWidth: 1500,
+                borderRadius: 100,
+                borderColor: "white",
+                borderWidth: 5,
+                borderStyle: "solid",
+                boxShadow: "0px 0px 10px white"
               }}
             >
               {Number(data.totalSupply) == 5555 ? (
@@ -186,7 +255,7 @@ function App() {
                   </s.TextTitle>
                   <s.SpacerSmall />
                   <s.TextDescription style={{ textAlign: "center" }}>
-                    Dont worry, you're not missing out! You can still get Boo Crew NFTs on{" "}
+                    Dont worry, you're not missing out! You can still get CryptoBugPunks on{" "}
                     <a
                       // target={"_blank"}
                       href={"https://testnets.opensea.io/collection/rinkeby-doodlenauts"}
@@ -205,18 +274,19 @@ function App() {
                   Excluding gas fees.
                 </s.TextDescription>
                 <s.SpacerSmall /> */}
-                  <s.TextDescription style={{ textAlign: "center", fontSize: 40 }}>
+                  <s.TextDescription style={{ textAlign: "center", fontSize: 30 }}>
                     {feedback}
                   </s.TextDescription>
-                  {/* <s.SpacerMedium /> */}
+                  <s.SpacerMedium />
                   {blockchain.account === "" ||
                     blockchain.smartContract === null ? (
                     <s.Container ai={"center"} jc={"center"}>
-                      <s.TextDescription style={{ textAlign: "center", fontSize: 50, marginBottom: 0 }}>
+                      <s.TextDescription style={{ textAlign: "center", fontSize: 50, marginBottom: 0, color: "white" }}>
                         Connect to the CryptoBugPunks Minter!
                       </s.TextDescription>
                       <s.SpacerSmall />
                       <StyledButton
+
                         style={{ fontFamily: "coder" }}
                         onClick={(e) => {
                           e.preventDefault();
@@ -226,7 +296,7 @@ function App() {
                       >
                         CONNECT
                       </StyledButton>
-                      <s.SpacerLarge />
+                      {/* <s.SpacerLarge /> */}
                       {/* <s.TextDescription style={{textAlign: "center", fontSize: 30, marginBottom: 0, paddingBottom: 0}}>
                       <a href="https://google.com">Boo Crew NFT Smart Contract</a>
                     </s.TextDescription> */}
@@ -242,28 +312,38 @@ function App() {
                   ) : (
                     <s.Container ai={"center"} jc={"center"} fd={"row"} style={{ marginTop: 0, paddingTop: 0 }}>
                       <form>
-                        I want <input
-                          id="inputBox"
-                          placeholder="#"
-                          type="number"
-                          min="1"
-                          max="100"
-                          style={{
-                            fontSize: 60,
-                            textAlign: "center",
-                            backgroundColor: "#FFA537",
-                            borderWidth: 4,
-                            borderColor: "black",
-                            borderStyle: "solid",
-                            borderRadius: 40,
-                            paddingRight: 10,
-                            // marginBottom: 20,
-                            // paddingLeft: 0,
-                            // marginLeft: 0,
-                            width: 80,
-                            fontFamily: "coder",
-                          }}
-                        /> Ghosts
+                        I want
+                        <div style={{
+                          backgroundColor: "grey",
+                          borderWidth: 5,
+                          borderColor: "black",
+                          borderStyle: "solid",
+                          borderRadius: 40,
+                          textAlign: "center"
+                        }}>
+                          <input
+                            id="inputBox"
+                            placeholder="#"
+                            type="number"
+                            min="1"
+                            max="10"
+                            style={{
+                              fontSize: 40,
+                              textAlign: "center",
+                              backgroundColor: "grey",
+                              // borderRadius: 40,
+                              // paddingRight: -10,
+                              // marginBottom: 20,
+                              // paddingLeft: 0,
+                              // marginLeft: 0,
+                              maxWidth: 200,
+                              borderWidth: 0,
+                              fontFamily: "coder",
+                              color: "white"
+                            }}
+                          />
+                        </div>
+                        Ghosts
                       </form>
                       <s.SpacerSmall />
                       <StyledButton
@@ -282,10 +362,78 @@ function App() {
                 </>
               )}
             </s.Container>
+            {/* All done! */}
+            <s.SpacerLarge />
+            <s.Container
+              flex={1}
+              jc={"center"}
+              ai={"center"}
+              id="Roadmap"
+              style={{
+                backgroundColor: "black",
+                color: "white",
+                padding: 24,
+                paddingTop: 24,
+                fontSize: 40,
+                maxWidth: 1500,
+                borderRadius: 100,
+                borderColor: "white",
+                borderWidth: 5,
+                borderStyle: "solid",
+                boxShadow: "0px 0px 10px white",
+                textAlign: "center"
+              }}
+            >
+              <text className="rainbow" style={{ fontSize: 60 }}>Roadmap</text>
+              <br></br>
+              <s.SpacerMedium />
+              <s.SpacerMedium />
+              <text style={{ textAlign: "left", paddingLeft: 40 }}>
+                <text className="rainbow" style={{ fontSize: 60 }}>25% </text>
+                <br></br>
+                <s.SpacerSmall />
+                - 10 NFT Giveaway and 5 x $1000 ETH Giveaway
+                <br />
+                <s.SpacerMedium />
+                <s.SpacerSmall />
+                <text className="rainbow" style={{ fontSize: 60 }}>50% </text>
+                <br></br>
+                <s.SpacerSmall />
+                - 5% to Community Selected Charities and Rarity Ranking
+                <br />
+                <s.SpacerMedium />
+                <s.SpacerSmall />
+                <text className="rainbow" style={{ fontSize: 60 }}>75% </text>
+                <br></br>
+                <s.SpacerSmall />
+                - Buy plot of land in the Metaverse to build a CryptoBugPunk garage where the community
+                can show their art and hang out and 5% to Community Selected Animal Shelters
+                <br />
+                <s.SpacerMedium />
+                <s.SpacerSmall />
+                <text className="rainbow" style={{ fontSize: 60 }}>100% </text>
+                <br></br>
+                <s.SpacerSmall />
+                - 10 x $1000 ETH Giveaway. Continued growth of project, and additional collections released.
+                <br />
+                <s.SpacerMedium />
+                <s.SpacerSmall />
+                <s.SpacerMedium />
+                <s.SpacerSmall />
+                <s.SpacerMedium />
+                <s.SpacerSmall />
+              </text>
+              Get them bugs started!!!
+            </s.Container>
+
           </s.Container>
+
           {/* <s.SpacerMedium /> */}
         </ResponsiveWrapper>
         <s.SpacerSmall />
+        <s.SpacerLarge />
+        <s.SpacerLarge />
+        <s.SpacerLarge />
         <s.Container jc={"center"} ai={"center"} style={{ width: "70%" }}>
           <s.TextDescription id="google" style={{ textAlign: "center", fontSize: 40 }}>
             <a
@@ -295,7 +443,7 @@ function App() {
                 color: "black",
                 fontSize: 20,
               }}
-            >Boo Crew NFT Smart Contract</a>
+            >CryptoBugPunks Smart Contract</a>
           </s.TextDescription>
           <s.SpacerSmall />
           {/* <s.TextDescription style={{ textAlign: "center", fontSize: 9 }}>

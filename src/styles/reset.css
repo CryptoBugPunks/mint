@@ -85,6 +85,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  color: white;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -128,6 +129,7 @@ table {
   font-weight: bold;
   src: local("coder"),
     url(../styles/PressStart2P-Regular.ttf);
+  color: white;
 }
 
 body {
@@ -137,6 +139,7 @@ body {
   /* font-size: 40; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: white;
 }
 
 * {
@@ -159,10 +162,12 @@ body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   overflow-x: hidden;
+  color: white;
 }
 
 html {
   background-color: "#4C4C4C";
+  color: white;
 }
 
 div {

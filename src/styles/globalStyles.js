@@ -4,13 +4,15 @@ import styled from "styled-components";
 export const Screen = styled.div`
   background-color: var(--dark-grey);
   background-image: ${({ image }) => (image ? `url(${image})` : "none")};
-  background-image: url("./city.jpg");
-  background-size: cover;
+  background-image: url("https://raw.githubusercontent.com/CryptoBugPunks/mint/main/src/styles/city.png");
+  background-repeat: repeat-x;
+  background-size: auto 100%;
   background-position: center;
   width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  color: white;
 `;
 
 // Used for providing space between components
@@ -49,6 +51,7 @@ export const Container = styled.div`
   background-image: ${({ image }) => (image ? `url(${image})` : "none")};
   background-size: cover;
   background-position: center;
+  color: white;
 `;
 
 export const TextTitle = styled.p`
@@ -68,6 +71,7 @@ export const TextDescription = styled.p`
   color: var(--white);
   font-size: 12px;
   line-height: 1.6;
+  color: white;
 `;
 
 export const StyledClickable = styled.div`
