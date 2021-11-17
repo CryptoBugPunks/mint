@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/mint/static/css/main.3ccabded.chunk.css",
+    "main.js": "/mint/static/js/main.3f0e9407.chunk.js",
+    "main.js.map": "/mint/static/js/main.3f0e9407.chunk.js.map",
+    "runtime-main.js": "/mint/static/js/runtime-main.7fd62655.js",
+    "runtime-main.js.map": "/mint/static/js/runtime-main.7fd62655.js.map",
+    "static/js/2.81aa6ec1.chunk.js": "/mint/static/js/2.81aa6ec1.chunk.js",
+    "static/js/2.81aa6ec1.chunk.js.map": "/mint/static/js/2.81aa6ec1.chunk.js.map",
+    "static/js/3.1f032b28.chunk.js": "/mint/static/js/3.1f032b28.chunk.js",
+    "static/js/3.1f032b28.chunk.js.map": "/mint/static/js/3.1f032b28.chunk.js.map",
+    "index.html": "/mint/index.html",
+    "static/css/main.3ccabded.chunk.css.map": "/mint/static/css/main.3ccabded.chunk.css.map",
+    "static/js/2.81aa6ec1.chunk.js.LICENSE.txt": "/mint/static/js/2.81aa6ec1.chunk.js.LICENSE.txt",
+    "static/media/reset.css": "/mint/static/media/PressStart2P-Regular.5f45b521.ttf",
+    "static/media/cars.f373f308.gif": "/mint/static/media/cars.f373f308.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7fd62655.js",
+    "static/js/2.81aa6ec1.chunk.js",
+    "static/css/main.3ccabded.chunk.css",
+    "static/js/main.3f0e9407.chunk.js"
+  ]
+}
