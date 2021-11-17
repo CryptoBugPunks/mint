@@ -7,6 +7,7 @@ import styled from "styled-components";
 import i1 from "./assets/images/cars.gif";
 import newbanner from "./assets/images/text.png"
 import "./style.css";
+import "./newthing.js";
 
 export const StyledButton = styled.button`
   padding: 10px;
@@ -111,6 +112,15 @@ function App() {
     getData();
   }, [blockchain.account]);
 
+  function onLinkClick() {
+    document.getElementById("Minter").scrollIntoView();
+  }
+
+  function onRoadClick() {
+    document.getElementById("Roadmap").scrollIntoView();
+  }
+
+
   return (
     <s.Screen style={{ backgroundColor: "var(--black)", fontSize: 40 }}>
       <s.Container className="bigContainer" flex={1} ai={"center"} style={{ padding: 24 }}>
@@ -141,7 +151,7 @@ function App() {
           borderStyle: "solid",
           // boxShadow: "0px 0px 10px white"
         }}>
-          <a href="#Minter">Minter</a> | <a href="#Roadmap">Roadmap</a> | <a href="https://opensea.io"> OpenSea</a> | <a href="https://twitter.com">Twitter</a>
+          <a onClick={onLinkClick}>Minter</a> | <a onClick={onRoadClick}>Roadmap</a> | <a href="https://opensea.io"> OpenSea</a> | <a href="https://twitter.com">Twitter</a>
         </div>
         <s.SpacerMedium />
         <s.Container
