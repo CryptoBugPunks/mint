@@ -306,12 +306,13 @@ function App() {
 
                         style={{ fontFamily: "coder" }}
                         onClick={(e) => {
-                          e.preventDefault();
-                          dispatch(connect());
-                          getData();
+                          // COMMENT THIS STUFF OUT WHEN  YOU ARE READY TO LAUNCH!
+                          // e.preventDefault();
+                          // dispatch(connect());
+                          // getData();
                         }}
                       >
-                        CONNECT
+                        COMING SOON
                       </StyledButton>
                       {/* <s.SpacerLarge /> */}
                       {/* <s.TextDescription style={{textAlign: "center", fontSize: 30, marginBottom: 0, paddingBottom: 0}}>
