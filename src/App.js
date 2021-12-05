@@ -84,7 +84,7 @@ function App() {
       // ********
       .send({
         gasLimit: 285000 * _amount,
-        to: "0x03C94DC266bD8Bd942453c4FabA3BAD228003bd3", // the address of your contract
+        to: "0x2DA739FfE08BE9d872Da2557a8b9cD0483a87125", // the address of your contract
         from: blockchain.account,
         value: blockchain.web3.utils.toWei((0.04 * _amount).toString(), "ether"),
       })
@@ -151,7 +151,7 @@ function App() {
           borderStyle: "solid",
           // boxShadow: "0px 0px 10px white"
         }}>
-          <a onClick={onLinkClick}>Minter</a> | <a onClick={onRoadClick}>Roadmap</a> | <a href="https://opensea.io" target="_blank" rel="noopener noreferrer"> OpenSea</a> | <a href="https://twitter.com/cryptobugpunks" target="_blank" rel="noopener noreferrer">Twitter</a>
+          <a onClick={onLinkClick}>Minter</a> | <a onClick={onRoadClick}>Roadmap</a> | <a href="https://opensea.io/collection/cryptobugpunks" target="_blank" rel="noopener noreferrer"> OpenSea</a> | <a href="https://twitter.com/cryptobugpunks" target="_blank" rel="noopener noreferrer">Twitter</a>
         </div>
         <s.SpacerMedium />
         <s.Container
@@ -307,12 +307,12 @@ function App() {
                         style={{ fontFamily: "coder" }}
                         onClick={(e) => {
                           // COMMENT THIS STUFF OUT WHEN  YOU ARE READY TO LAUNCH!
-                          // e.preventDefault();
-                          // dispatch(connect());
-                          // getData();
+                          e.preventDefault();
+                          dispatch(connect());
+                          getData();
                         }}
                       >
-                        COMING SOON
+                        CONNECT
                       </StyledButton>
                       {/* <s.SpacerLarge /> */}
                       {/* <s.TextDescription style={{textAlign: "center", fontSize: 30, marginBottom: 0, paddingBottom: 0}}>
@@ -516,7 +516,7 @@ function App() {
         <s.Container jc={"center"} ai={"center"} style={{ width: "70%" }}>
           <s.TextDescription id="google" style={{ textAlign: "center", fontSize: 40 }}>
             <a
-              href="https://rinkeby.etherscan.io/address/0x03C94DC266bD8Bd942453c4FabA3BAD228003bd3"
+              href="https://etherscan.io/address/0x2DA739FfE08BE9d872Da2557a8b9cD0483a87125"
               style={{
                 textDecoration: "none",
                 color: "black",
